@@ -78,17 +78,17 @@ export default class MetaTitlePlugin extends Plugin implements PluginInterface {
         await this.mc.refresh();
     }
 
-    private async delay(): Promise<void> {
+    private async delay(): Promise<void | Notice> {
         const delay = this.storage.get("boot").get("delay").value();
         const background = this.storage.get("boot").get("background").value();
         this.logger.log(`Plugin manual delay ${delay}`);
-        let promise = new Promise(r =>
+        let promise = new Promise<void | Notice>(resolve =>
             setTimeout(() => {
                 this.fc = Container.get(SI["feature:composer"]);
                 this.mc = Container.get(SI["manager:composer"]);
                 this.bind();
                 this.registerCommands();
-                r();
+                resolve();
             }, delay)
         );
         if (delay > 0) {

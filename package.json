@@ -44,6 +44,7 @@
     "yaml": "^2.3.1"
   },
   "dependencies": {
+    "front-matter-plugin-api-provider": "^0.1.4-alpha",
     "gts": "^3.1.1",
     "i18next": "^23.3.0",
     "inversify": "^6.0.1",
