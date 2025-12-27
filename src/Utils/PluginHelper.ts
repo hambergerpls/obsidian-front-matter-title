@@ -60,6 +60,7 @@ export default class PluginHelper {
                 [Feature.Canvas]: { enabled: false, templates: { main: "", fallback: "" } },
                 [Feature.Backlink]: { enabled: false, templates: { main: "", fallback: "" } },
                 [Feature.WindowFrame]: { enabled: false, templates: { main: "", fallback: "" } },
+                [Feature.FirstHeading]: { enabled: false, templates: { main: "", fallback: "" } },
                 [Feature.NoteLink]: {
                     enabled: false,
                     strategy: NoteLinkStrategy.OnlyEmpty,

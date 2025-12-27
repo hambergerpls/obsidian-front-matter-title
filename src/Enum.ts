@@ -29,6 +29,7 @@ export enum Feature {
     Backlink = Leaves.BL,
     NoteLink = "noteLink",
     WindowFrame = "windowFrame",
+    FirstHeading = "firstHeading",
 }
 
 export const Managers = [

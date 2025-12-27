@@ -19,6 +19,7 @@ export default class FeatureHelper {
             Feature.Backlink,
             Feature.NoteLink,
             Feature.WindowFrame,
+            Feature.FirstHeading,
         ];
     }
 
@@ -50,6 +51,8 @@ export default class FeatureHelper {
                 return t("feature.noteLink.name");
             case Feature.WindowFrame:
                 return t("feature.windowFrame.name");
+            case Feature.FirstHeading:
+                return t("feature.firstHeading.name");
         }
     }
 
@@ -81,6 +84,8 @@ export default class FeatureHelper {
                 return t("feature.noteLink.desc");
             case Feature.WindowFrame:
                 return t("feature.windowFrame.desc");
+            case Feature.FirstHeading:
+                return t("feature.firstHeading.desc");
         }
     }
 

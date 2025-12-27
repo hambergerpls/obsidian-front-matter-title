@@ -23,6 +23,7 @@ import { StrategyType as AliasStrategyType, ValidatorType as AliasValidatorType 
 import { ValidatorAuto, ValidatorRequired } from "@src/Feature/Alias/Validator";
 import { InlineTitleManager } from "@src/Feature/InlineTitle/InlineTitleManager";
 import { CanvasManager } from "@src/Feature/Canvas/CanvasManager";
+import { FirstHeadingFeature } from "@src/Feature/FirstHeading/FirstHeadingFeature";
 import AbstractManager from "../../src/Feature/AbstractManager";
 import FeatureHelper from "@src/Utils/FeatureHelper";
 import FeatureService from "@src/Feature/FeatureService";
@@ -79,6 +80,10 @@ export default (container: Container) => {
         .to(InlineTitleManager)
         .whenTargetNamed(InlineTitleManager.getId());
     container.bind<FeatureInterface<any>>(SI.feature).to(CanvasManager).whenTargetNamed(CanvasManager.getId());
+    container
+        .bind<FeatureInterface<any>>(SI.feature)
+        .to(FirstHeadingFeature)
+        .whenTargetNamed(FirstHeadingFeature.getId());
 
     container
         .bind(SI["factory:alias:modifier:strategy"])

@@ -70,4 +70,8 @@ export default class ObsidianFacade {
     public getAppTitle(text: string = null): string {
         return this.app.getAppTitle(text);
     }
+
+    public processFrontMatter(file: TFile, fn: (frontmatter: any) => void): Promise<void> {
+        return this.app.fileManager.processFrontMatter(file, fn);
+    }
 }

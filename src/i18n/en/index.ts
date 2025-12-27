@@ -103,6 +103,10 @@ const en = {
             name: "Window Frame Title",
             desc: "Replace shown title in window frame",
         },
+        [Feature.FirstHeading]: {
+            name: "First Heading Sync",
+            desc: "Synchronize the first heading of the file to the 'title' frontmatter property.",
+        },
     },
     manage: "Manage",
     template: {
